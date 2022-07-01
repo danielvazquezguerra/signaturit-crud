@@ -1,11 +1,11 @@
 import {connect} from "mongoose";
-import './database'
+
 
 ( async () =>{
 
     try {
 
-        const db = await connect('mongodb://localhost/signaturit-crud');
+        const db = await connect("mongodb://localhost/signaturit-crud")
         console.log('DB connected to', db.connection.name )
         
     } catch (error) {
@@ -16,3 +16,5 @@ import './database'
     
 
 })()
+
+
