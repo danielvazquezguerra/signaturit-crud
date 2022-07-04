@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 
-const documentSchema = new Schema ({
+const fileSchema = new Schema ({
 
     title: {
         type: String,
@@ -18,4 +18,4 @@ const documentSchema = new Schema ({
     versionKey: false
 })
 
-export default model ('Document', documentSchema)
+export default model ('File', fileSchema);
