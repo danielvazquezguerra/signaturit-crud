@@ -34,14 +34,7 @@ router.get('/delete/:id', async ( req, res ) => {
 
 router.post('/add', async (req, res) => {
 
-    // let { 
-	// 	title, 
-	// 	description,
-    //     status
-	// } = req.body;
- 
-
-    const file = File(req.body);
+    const file = File(req.query);
 
     const fileAdd = await file.save();
 
