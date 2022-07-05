@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 
-const fileSchema = new Schema ({
+const fileSchema = Schema ({
 
     title: {
         type: String,
