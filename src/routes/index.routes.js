@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import File from '../models/File';
 
+
 const router = Router();
 
 
@@ -20,7 +21,6 @@ router.post('/update/:id', async ( req, res ) => {
 router.get('/all', async ( req, res ) => {
 
     const allFiles =  await File.find();
-    console.log(allFiles);
     res.send(allFiles)
 })
 

@@ -1,3 +1,4 @@
+import fileUpload from "express-fileupload";
 import { Schema, model } from "mongoose";
 
 
@@ -12,6 +13,7 @@ const fileSchema = Schema ({
         type: Boolean,
         default: false
     },
+    file: Buffer
 
 },{
     timestamps: true,
