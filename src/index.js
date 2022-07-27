@@ -1,3 +1,4 @@
+'use sctrit';
 import app from './app';
 import './database';
 

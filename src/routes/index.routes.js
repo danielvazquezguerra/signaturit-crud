@@ -34,11 +34,22 @@ router.get('/delete/:id', async ( req, res ) => {
 
 router.post('/add', async (req, res) => {
 
-    const file = File(req.query);
+    
+    // console.log(file);
+    let _file = File(req.query);
 
-    const fileAdd = await file.save();
+    if (req.query.file) {
 
-    console.log(fileAdd)
+     let file64 = _file.file;
+    console.log(file64)
+
+    }
+
+
+
+    // const fileAdd = await file.save();
+
+    // console.log(fileAdd)
 
     res.send('document add');
 

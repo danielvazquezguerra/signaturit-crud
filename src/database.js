@@ -5,7 +5,7 @@ import {connect} from "mongoose";
 
     try {
 
-        const db = await connect("mongodb://localhost/signaturit-crud")
+        const db = await connect("mongodb://localhost/curso_mongo")
         console.log('DB connected to', db.connection.name )
         
     } catch (error) {

@@ -1,3 +1,4 @@
+'use strict';
 import express from 'express';
 import indexRoutes from './routes/index.routes';
 import path from 'path';
@@ -5,9 +6,13 @@ import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
 
 
+
 const cors = require('cors');
 
 const app = express();
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json()) // Para parsear las respuestas con JSON.
 app.use(cors());
 
 app.set('views', path.join(__dirname, 'views'));
