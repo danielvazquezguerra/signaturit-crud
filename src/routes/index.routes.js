@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import Fruta from '../models/Fruta';
+import {allFrutas} from '../controllers/fruta'
 
 
 const router = Router();
@@ -11,16 +11,7 @@ router.get('/', ( req, res ) => {
 
 
 
-router.get('/all', async ( req, res ) => {
-
-    const allFrutas = await Fruta.find();
-
-    console.log(allFrutas)
-    res.send(allFrutas);
-})
-
-
-
+router.get('/all', allFrutas )
 
 
 export default router;

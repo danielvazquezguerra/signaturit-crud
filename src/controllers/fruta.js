@@ -1,11 +1,14 @@
 'use strict';
 
+import Fruta from '../models/Fruta';
 
-const allFrutas = (req, res) => {
 
-    res.status(200).send({
-        message: 'Trayendo todas las frutas'
-    })
+const allFrutas = async (req, res) => {
+
+    const allFrutas = await Fruta.find();
+
+    console.log(allFrutas)
+    res.send(allFrutas);
 }
 
 module.exports = {
